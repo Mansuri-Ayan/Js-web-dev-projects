@@ -28,5 +28,5 @@ git clone https://github.com/Mansuri-Ayan/Js-web-dev-projects.git
 ```
 
 1. Navigate to the project directory:
-2. cd tic-tac-toe
+2. cd interactive_tic_tac_toe
 3. Open the index.html file in a browser to play.
