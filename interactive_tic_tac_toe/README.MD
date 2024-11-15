@@ -12,7 +12,7 @@ I'm excited to share my latest project—a classic Tic Tac Toe game built using 
 You can check out the code here:
 
 ```
-
+https://github.com/Mansuri-Ayan/Js-web-dev-projects/tree/95faa859006ce255ceac0ac308582e1e38acdab7/interactive_tic_tac_toe
 ```
 
 Building this game helped me improve my problem-solving skills and understand DOM manipulation better. 🎉
