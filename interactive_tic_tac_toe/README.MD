@@ -6,7 +6,7 @@ A simple and interactive Tic Tac Toe game built with HTML, CSS, and JavaScript. 
 
 ## Features
 
-🕹️ Player vs Player Mode: Two players can compete by taking turns. 
+🕹️ Player vs Player Mode: Two players can compete by taking turns. <br>
 🏆 Win Detection: Automatically detects and announces the winner or a draw.
 🔄 Reset Functionality: Easily restart the game with a single click.
 🎨 Responsive Design: Optimized for various screen sizes.
