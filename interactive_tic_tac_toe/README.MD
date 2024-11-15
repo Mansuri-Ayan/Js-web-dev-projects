@@ -27,9 +27,6 @@ Clone this repository:
 git clone https://github.com/Mansuri-Ayan/Js-web-dev-projects.git
 ```
 
-## Navigate to the project directory:
-
-bash
-Copy code
-cd tic-tac-toe  
-Open the index.html file in a browser to play.
+1. Navigate to the project directory:
+2. cd tic-tac-toe  
+3. Open the index.html file in a browser to play.
