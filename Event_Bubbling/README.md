@@ -40,6 +40,4 @@ Each of these elements has an event listener attached that logs messages when th
 
 1. Clone the repository to your local machine:
 
-```
- git clone https://github.com/Mansuri-Ayan/Js-web-dev-projects.git
-```
+git clone https://github.com/Mansuri-Ayan/Js-web-dev-projects.git
