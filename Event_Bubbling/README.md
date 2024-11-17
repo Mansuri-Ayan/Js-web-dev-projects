@@ -39,9 +39,9 @@ Each of these elements has an event listener attached that logs messages when th
 ## Usage
 
 1. Clone the repository to your local machine:
-
+```
 git clone https://github.com/Mansuri-Ayan/Js-web-dev-projects.git
-
+```
 2. Open the index.html file in a web browser to see the event bubbling in action.
 open index.html
 
