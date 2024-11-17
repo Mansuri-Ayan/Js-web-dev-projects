@@ -41,3 +41,16 @@ Each of these elements has an event listener attached that logs messages when th
 1. Clone the repository to your local machine:
 
 git clone https://github.com/Mansuri-Ayan/Js-web-dev-projects.git
+
+2. Open the index.html file in a web browser to see the event bubbling in action.
+open index.html
+
+3. To see the behavior:
+
++ Open the browser's developer console (usually F12 or right-click > "Inspect").
++ Click on any of the li elements, the ul element, or the div element and observe the messages logged in the console.
+
+## Technologies Used
++ HTML5
++ CSS3
++ JavaScript 
