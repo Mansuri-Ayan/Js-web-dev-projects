@@ -11,19 +11,29 @@
   <body>
     <h1>CallBack Hell</h1>
     <script>
+      // Select the <h1> element to change its color
       let h1 = document.querySelector("h1");
 
+      // Function to change the color of the <h1> element after a delay
       function changeColor(color, delay, nextColorChange) {
+        // Using setTimeout to change the color after the specified delay
         setTimeout(() => {
-          h1.style.color = color;
+          h1.style.color = color;  // Change the color of <h1> element
+          
+          // If there's a next color change, call it (recursive callback)
           if (nextColorChange) nextColorChange();
         }, delay);
       }
 
+      // Starting the color change sequence with the first color (red)
       changeColor("red", 1000, () => {
+        // After 1 second, change to yellow
         changeColor("yellow", 2000, () => {
+          // After 2 more seconds, change to green
           changeColor("green", 3000, () => {
+            // After 3 more seconds, change to orange
             changeColor("orange", 4000, () => {
+              // After 4 more seconds, change to pink (final color change)
               changeColor("pink", 5000);
             });
           });

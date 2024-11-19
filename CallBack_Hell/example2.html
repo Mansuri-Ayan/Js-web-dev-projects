@@ -9,40 +9,57 @@
 
   <body>
     <script>
+      <!-- Title for the page -->
       <title>Database Save Simulation with Callback Hell</title>
-      function savetoDb(data, success, faliure) {
+
+      // Function simulating a database save operation with random success or failure
+      function savetoDb(data, success, failure) {
+        // Simulate internet speed with a random number between 1 and 10
         let internetSpeed = Math.floor(Math.random() * 10) + 1;
+
+        // If internet speed is greater than 4, simulate a successful save
         if (internetSpeed > 4) {
-          success();
+          success(); // Call the success callback
         } else {
-          faliure();
+          failure(); // Call the failure callback
         }
       }
 
+      // Start the save operation with the first piece of data ("Mansuri Ayan")
       savetoDb(
         "Mansuri Ayan",
         () => {
+          // Success callback for the first data save
           console.log("success 1 : your data was saved ");
+          
+          // If the first save is successful, proceed to the second data save
           savetoDb(
             "Hello World",
             () => {
+              // Success callback for the second data save
               console.log("success 2 : your data was saved ");
+              
+              // If the second save is successful, proceed to the third data save
               savetoDb(
                 "Not good",
                 () => {
+                  // Success callback for the third data save
                   console.log("success 3 : your data was saved ");
                 },
                 () => {
+                  // Failure callback for the third data save
                   console.log("failure 3 : weak connection: data not saved");
                 }
               );
             },
             () => {
+              // Failure callback for the second data save
               console.log("failure 2 : weak connection: data not saved");
             }
           );
         },
         () => {
+          // Failure callback for the first data save
           console.log("failure 1 : weak connection: data not saved");
         }
       );
