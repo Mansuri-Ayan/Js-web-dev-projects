@@ -37,10 +37,9 @@
     </div>
 
     <script>
-      // Selecting the div, ul, and all li elements from the DOM
+      // Selecting the div and ul elements from the DOM
       let div = document.querySelector("div");
       let ul = document.querySelector("ul");
-      let li = document.querySelectorAll("li");
 
       // Event listener for clicks on the div
       div.addEventListener("click", (event) => {
@@ -56,14 +55,15 @@
         console.log("ul was clicked");
       });
 
-      // Adding event listeners to all li (list items) elements
-      for (let lis of li) {
-        lis.addEventListener("click", (event) => {
-          // stopPropagation prevents the event from bubbling up to ul or div
+      // Using event delegation for li elements (clicking any li will trigger this)
+      ul.addEventListener("click", (event) => {
+        // Check if the clicked target is an li element
+        if (event.target.tagName === "LI") {
+          // stopPropagation prevents the event from bubbling up to the ul or div
           event.stopPropagation();
-          console.log("li was clicked");
-        });
-      }
+          console.log(`${event.target.textContent} was clicked`);
+        }
+      });
     </script>
   </body>
 </html>
