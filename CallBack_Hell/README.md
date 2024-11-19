@@ -22,9 +22,14 @@ This file demonstrates the use of callbacks in a database simulation. The operat
 
 ---
 
-## How to Run
+# How to Run Locally
 
-1. Clone or download this repository to your local machine.
-2. Open the `example1.html` or `example2.html` files in a web browser to see the callback hell in action.
+Clone this repository:
 
----
+```
+git clone https://github.com/Mansuri-Ayan/Js-web-dev-projects.git
+```
+
+1. Navigate to the project directory:
+2. cd CallBack_Hell
+3. Open the file you like in a browser.

@@ -54,3 +54,15 @@ open index.html
 + HTML5
 + CSS3
 + JavaScript 
+
+# How to Run Locally
+
+Clone this repository:
+
+```
+git clone https://github.com/Mansuri-Ayan/Js-web-dev-projects.git
+```
+
+1. Navigate to the project directory:
+2. cd Event_Bubbling
+3. Open the index.html file in a browser.
