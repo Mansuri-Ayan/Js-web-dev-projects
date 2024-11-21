@@ -5,40 +5,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Promisses</title>
+    <title>Promises Example</title>
   </head>
 
   <body>
     <script>
+      // Function to simulate saving data to a database with a random internet speed
       function savetoDb(data) {
         return new Promise((resolve, reject) => {
+          // Simulating random internet speed between 1 and 10
           let internetSpeed = Math.floor(Math.random() * 10) + 1;
+
+          // If internet speed is greater than 4, resolve the promise (data saved)
           if (internetSpeed > 4) {
-            resolve("success : your data was saved ");
+            resolve(`Success: Your data "${data}" was saved.`);
           } else {
-            reject("failure  : weak connection: data not saved");
+            // If internet speed is weak (4 or less), reject the promise (data not saved)
+            reject(`Failure: Weak connection, data "${data}" not saved.`);
           }
         });
       }
 
+      // Starting the chain of promises for saving data
       savetoDb("Jon Doe 1")
         .then((result) => {
-          console.log("data 1 saved : promise was resolved");
-          console.log("result of promise =>", result);
-          return savetoDb("Jon Doe 2");
+          // When the first data is successfully saved, log the result and proceed to the next data
+          console.log("Data 1 saved: Promise was resolved");
+          console.log("Result of Promise =>", result);
+          return savetoDb("Jon Doe 2"); // Proceed to save the second piece of data
         })
         .then((result) => {
-          console.log("data 2 saved : promise was resolved");
-          console.log("result of promise =>", result);
-          return savetoDb("Jon Doe 3");
+          // When the second data is successfully saved, log the result and proceed to the next data
+          console.log("Data 2 saved: Promise was resolved");
+          console.log("Result of Promise =>", result);
+          return savetoDb("Jon Doe 3"); // Proceed to save the third piece of data
         })
         .then((result) => {
-            console.log("data 3 saved : promise was resolved");
-            console.log("result of promise =>", result);
+          // When the third data is successfully saved, log the result
+          console.log("Data 3 saved: Promise was resolved");
+          console.log("Result of Promise =>", result);
         })
         .catch((error) => {
-          console.log("result of promise =>", error);
-          console.log("promise was rejected");
+          // If any promise is rejected, log the error and handle the rejection
+          console.log("Result of Promise =>", error);
+          console.log("Promise was rejected");
         });
     </script>
   </body>
