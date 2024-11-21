@@ -1,0 +1,45 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promisses</title>
+  </head>
+
+  <body>
+    <script>
+      function savetoDb(data) {
+        return new Promise((resolve, reject) => {
+          let internetSpeed = Math.floor(Math.random() * 10) + 1;
+          if (internetSpeed > 4) {
+            resolve("success : your data was saved ");
+          } else {
+            reject("failure  : weak connection: data not saved");
+          }
+        });
+      }
+
+      savetoDb("Jon Doe 1")
+        .then((result) => {
+          console.log("data 1 saved : promise was resolved");
+          console.log("result of promise =>", result);
+          return savetoDb("Jon Doe 2");
+        })
+        .then((result) => {
+          console.log("data 2 saved : promise was resolved");
+          console.log("result of promise =>", result);
+          return savetoDb("Jon Doe 3");
+        })
+        .then((result) => {
+            console.log("data 3 saved : promise was resolved");
+            console.log("result of promise =>", result);
+        })
+        .catch((error) => {
+          console.log("result of promise =>", error);
+          console.log("promise was rejected");
+        });
+    </script>
+  </body>
+</html>
