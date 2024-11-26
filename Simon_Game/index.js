@@ -23,7 +23,7 @@ function levelUp() {
   level++;
   h2.innerHTML = `level ${level}`;
   let randIdx = Math.floor(Math.random() * 4);
-  console.log(randIdx);
+  console.log("Index of button => ", randIdx + 1);
   let randColor = btns[randIdx];
   let randbtn = document.querySelector(`.${randColor}`);
   // console.log(randbtn);
