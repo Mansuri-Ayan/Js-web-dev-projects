@@ -26,11 +26,9 @@ function levelUp() {
   console.log("Index of button => ", randIdx + 1);
   let randColor = btns[randIdx];
   let randbtn = document.querySelector(`.${randColor}`);
-  // console.log(randbtn);
   gameSeq.push(randColor);
   console.log(randColor);
   console.log(gameSeq);
-
   btnFlash(randbtn);
 }
 
@@ -49,7 +47,6 @@ function userFlash(btn) {
 
 function btnPress() {
   let btn = this;
-  // console.log(this);
   userFlash(btn);
   userColor = btn.getAttribute("id");
   console.log(userColor);
