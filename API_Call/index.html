@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API (Application Programming Interface)</title>
+  </head>
+
+  <body>
+    <h1>Discover 10 Amazing Random Facts About Cats!</h1>
+    <script>
+      let url = "https://catfact.ninja/facts";
+
+      async function getFacts() {
+        try {
+          let res = await fetch(url);
+          let data = await res.json();
+          let i = 0;
+
+          function printFact() {
+            if (i < 10) {
+              let p = document.createElement("p");
+              p.textContent = `${i + 1}) ${data.data[i].fact}`;
+              document.body.appendChild(p);
+              i++;
+              setTimeout(printFact, 1000); 
+            }
+          }
+
+          printFact();
+        } catch (error) {
+          console.log(error);
+        }
+        console.log("This executes even if an error occurs.");
+      }
+
+      getFacts();
+    </script>
+  </body>
+</html>
